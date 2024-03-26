@@ -1,0 +1,6 @@
+/* En SliderProduct.css */
+.slider-container {
+  width: 100%; /* Ajusta según sea necesario */
+  max-width: 1200px; /* Establece un ancho máximo */
+  margin: 0 auto; /* Centra el contenedor */
+}

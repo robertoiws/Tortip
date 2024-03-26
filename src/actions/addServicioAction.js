@@ -1,0 +1,52 @@
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "../utilities/axios";
+import { delayedTimeout } from "../utilities/delayedTimeout";
+import { httpParams } from "../utilities/httpParams";
+
+// Acción para obtener tipos de servicio
+export const addServicio = (ServicioForm) => async (dispatch) => {
+  try {
+    const response = await fetch(
+      "https://ecommerceconnectiveitapi.azurewebsites.net/api/Servicio",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(ServicioForm),
+      }
+    );
+
+    const data = await response.json();
+
+    // Resto del código para manejar la respuesta, actualizar el estado, etc.
+  } catch (error) {
+    // Manejar errores aquí
+    console.error("Error al agregar tipo de servicio:", error);
+  }
+};
+// Acción para actualizar tipos de servicio
+export const updateServicio = createAsyncThunk(
+  "tipoServicio/updateTipoServicio",
+  async ({ id, updatedData }, { rejectWithValue }) => {
+    try {
+      const response = await axios.put(`/api/Servicio?Pk=${id}`, updatedData);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(`Errores: ${error.message}`);
+    }
+  }
+);
+// Acción para obtener tipos de servicio
+export const getServicio = createAsyncThunk(
+  "tipoServicio/getTiposervicios",
+  async (_, { rejectWithValue }) => {
+    try {
+      await delayedTimeout(1000);
+      const response = await axios.get("/api/TipodeServicio/");
+      return response.data;
+    } catch (err) {
+      return rejectWithValue(`Errores: ${err.message}`);
+    }
+  }
+);

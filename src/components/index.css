@@ -1,0 +1,50 @@
+.hero-container {
+    padding: 10%;
+    margin: 0;
+}
+
+.text-section {
+    background-color: #E9EEFF;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    margin: 0.2% 0;
+    font-weight: 100;
+    font-size: 140%;
+    margin: auto;
+}
+
+.texto {
+    margin: 2% 20%;
+}
+
+.c-tera {
+    height: 200px;
+}
+
+.especialidades-box {
+    background: #26A86F;
+    font-size: 10px;
+    border-radius: 10px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 5vh;
+}
+.especialidades-box p {
+    margin: 0;
+    color:#fff;
+}
+.card-text{
+    font-size: 12px;
+}
+.consejos{
+    font-size: 10px;
+    color: #9b9b9b;
+}
+
+.img{
+    width: 50px !important;
+    height: 50px !important;
+}

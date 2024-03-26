@@ -1,0 +1,30 @@
+/* SliderProduct.css */
+
+/* Estilo del slider */
+.slick-slider {
+    margin: 0 auto; /* Centrar el slider */
+  }
+  
+  /* Estilo de las tarjetas */
+  .col-sm-5 {
+    max-width: 30%; /* Ocupar el 50% del ancho */
+    flex: 0 0 50%; /* Ocupar el 50% del ancho en pantallas más pequeñas */
+  }
+
+  .card-cursso{
+    border:0ch;
+  }
+  
+  /* Ajustar otros estilos según sea necesario */
+  
+.text-cora{
+  color: #c3c3c3;
+  font-size: 9px;
+}
+
+.mas{
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+  color: #000;
+}
